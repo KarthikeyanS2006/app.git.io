@@ -14,7 +14,8 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="/app.git.io/">
+    <!-- <base href="https://github.com/KarthikeyanS2006/app.git.io.git"> -->
+  <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -25,12 +26,24 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="bcomca_hub">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
-
+  
   <title>bcomca_hub</title>
   <link rel="manifest" href="manifest.json">
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('firebase-messaging-sw.js')
+      .then(function(registration) {
+        console.log('✅ Service Worker registered with scope:', registration.scope);
+      }).catch(function(err) {
+        console.log('❌ Service Worker registration failed:', err);
+      });
+  }
+</script>
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
