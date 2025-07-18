@@ -40,7 +40,7 @@
   <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-      .register('/app.git.io/firebase-messaging-sw.js')
+      .register('/firebase-messaging-sw.js')
       .then(function(registration) {
         console.log('✅ Service Worker registered with scope:', registration.scope);
       }).catch(function(err) {
